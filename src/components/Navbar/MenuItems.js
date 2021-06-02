@@ -26,4 +26,3 @@ export const MenuItems = [
     },
 ]
 
-// export default MenuItems;

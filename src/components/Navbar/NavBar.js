@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import { MenuItems } from "./MenuItems"
+import logo from '../../assets/images/logomth.png';
 
 class Navbar extends Component{
     render() {
         return (
           <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <img alt="logo" className="logo" src={logo}></img>
             <div class="container-fluid">
                 <button
                     class="navbar-toggler"

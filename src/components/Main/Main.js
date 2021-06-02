@@ -1,18 +1,17 @@
-import logo from './logo.svg';
-import Navbar from "./components/Navbar/NavBar";
-import './App.css';
+import Navbar from "../Navbar/NavBar";
+import './Main.css';
 
-function App() {
+function Main() {
   return (
     <div className="App">
-      <h1 className="menu-logo">MTH CarDetail </h1>
+      <h1 className="menu-logo"> MTH CarDetail </h1>
       <div className="menu-icon"></div>
       <Navbar />
     </div>
   );
 }
 
-export default App;
+export default Main;
 
 
 
