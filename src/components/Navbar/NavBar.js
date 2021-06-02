@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import { MenuItems } from "./MenuItems";
+import { MenuItems } from "./MenuItems"
 
 class Navbar extends Component{
     render() {
         return(
             <nav calssName='NavBarItems'> 
                 <h1 className='menu-logo'>MTH CarDetail </h1>
-                <div className='navItems'>
+                <div className='menu-icon'>
                     
                 </div> 
                 <ul>
@@ -14,7 +14,7 @@ class Navbar extends Component{
                         return (
                             <li key={index}>
                                 <a className={item.cName} href={item.url}>
-                                {item.title}
+                                {item.titulo}
                                 </a>
                             </li>
                         )
