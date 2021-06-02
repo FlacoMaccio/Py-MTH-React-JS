@@ -5,7 +5,9 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-    <Navbar />
+      <h1 className="menu-logo">MTH CarDetail </h1>
+      <div className="menu-icon"></div>
+      <Navbar />
     </div>
   );
 }

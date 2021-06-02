@@ -3,25 +3,35 @@ import { MenuItems } from "./MenuItems"
 
 class Navbar extends Component{
     render() {
-        return(
-            <nav calssName='NavBarItems'> 
-                <h1 className='menu-logo'>MTH CarDetail </h1>
-                <div className='menu-icon'>
-                    
-                </div> 
-                <ul>
-                    {MenuItems.map((item, index) => {
+        return (
+          <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup"
+                    aria-controls="navbarNavAltMarkup"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                > 
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                {MenuItems.map((item, index) => {
                         return (
-                            <li key={index}>
-                                <a className={item.cName} href={item.url}>
-                                {item.titulo}
-                                </a>
-                            </li>
-                        )
+                          <a className= {`nav-link ${item.cName}`} href={item.url}>
+                            {item.titulo}
+                          </a>
+                        );
                     })}
-                </ul>
-            </nav>
-        )
+                  
+                </div>
+              </div>
+            </div>
+          </nav>
+        );
     }
 }
 
