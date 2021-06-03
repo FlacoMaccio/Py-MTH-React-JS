@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { MenuItems } from "./MenuItems"
 import logo from '../../assets/images/logomth.png';
+import CartWidget from '../CarWidget';
+
 
 class Navbar extends Component{
     render() {
@@ -28,7 +30,7 @@ class Navbar extends Component{
                           </a>
                         );
                     })}
-                  
+                  <CartWidget />
                 </div>
               </div>
             </div>

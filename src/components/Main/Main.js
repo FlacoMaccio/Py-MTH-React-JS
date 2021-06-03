@@ -1,5 +1,6 @@
 import Navbar from "../Navbar/NavBar";
 import './Main.css';
+import ItemListContainer from '../ItemListContainer';
 
 function Main() {
   return (
@@ -7,9 +8,13 @@ function Main() {
       <h1 className="menu-logo"> MTH CarDetail </h1>
       <div className="menu-icon"></div>
       <Navbar />
+      <ItemListContainer />
     </div>
   );
 }
+
+// function ItemListContainer() {"Hola"}
+
 
 export default Main;
 
