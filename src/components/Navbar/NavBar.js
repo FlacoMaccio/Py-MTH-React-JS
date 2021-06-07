@@ -7,11 +7,11 @@ import CartWidget from '../CarWidget';
 class Navbar extends Component{
     render() {
         return (
-          <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
             <img alt="logo" className="logo" src={logo}></img>
-            <div class="container-fluid">
+            <div className="container-fluid">
                 <button
-                    class="navbar-toggler"
+                    className="navbar-toggler"
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#navbarNavAltMarkup"
@@ -19,10 +19,10 @@ class Navbar extends Component{
                     aria-expanded="false"
                     aria-label="Toggle navigation"
                 > 
-                <span class="navbar-toggler-icon"></span>
+                <span className="navbar-toggler-icon"></span>
               </button>
-              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
+              <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div className="navbar-nav">
                 {MenuItems.map((item, index) => {
                         return (
                           <a className= {`nav-link ${item.cName}`} href={item.url}>

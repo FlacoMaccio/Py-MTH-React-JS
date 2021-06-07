@@ -18,8 +18,8 @@ const ItemCount = ({initial, stock, onAdd}) => {
       <div className='d-flex aling-items-center mb-1'>
       <i className="far fa-minus-square counterButton"></i>
       {/* <span className="counterAmount">{}</span> */}
-      <i className="far fa-plus-square counterButton"></i>
-
+      {/* <i className="far fa-plus-square counterButton"></i> */}
+      <i className="bi bi-plus-square"></i>
       
 
 
