@@ -15,11 +15,11 @@ const [items, setItems] = useState(initial)
     setItems(1);
   }
   return (
-    <div className="container counter">
+    <div className="contenedor">
       
       <div className="container counter">
         <i className="far fa-minus-square counterButton" onClick={removeItems}></i>
-        <span className="counterAmount">{items}</span>
+        <span className="counterAmount">{items}</span>        
         <i className="far fa-plus-square counterButton" onClick={addItems}></i>            
       </div>
       <button className='btn btn-secondary' onClick = {agregarAlCarrito}> Agregar al carrito

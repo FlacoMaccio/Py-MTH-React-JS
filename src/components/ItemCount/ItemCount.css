@@ -1,5 +1,13 @@
-.fa-minus-square{
-    float: left;
-    justify-content: center;
+.contenedor{   
+    margin-bottom: 100px;
+    margin-top: 30px;
+    display: inline;
+} 
 
-} ;
+.counterButton {
+margin: 30px;
+}
+
+.btn-secondary {
+    margin: 30px;
+}
