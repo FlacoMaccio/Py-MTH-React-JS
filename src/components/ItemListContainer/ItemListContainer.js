@@ -12,7 +12,7 @@ const ItemListContainer = () => {
     return (
         <div>
             <img src={logo} className="img-fluid" alt="logo"></img>
-            <ItemCount initial={1} stock={20} onAdd={onAdd}/>
+            <ItemCount initial={1} stock={8} onAdd={onAdd}/>
         </div>
     )
 }
