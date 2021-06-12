@@ -23,7 +23,7 @@ class Navbar extends Component{
               </button>
               <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div className="navbar-nav">
-                {MenuItems.map((item, index) => {
+                {MenuItems.map((item) => {
                         return (
                           <a className= {`nav-link ${item.cName}`} href={item.url}>
                             {item.titulo}
