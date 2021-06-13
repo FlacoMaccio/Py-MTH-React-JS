@@ -1,15 +1,13 @@
-const Item = ({id, title, description, price, pictureUrl}) => {
-    return (
-        <ul className= 'item'> 
-
-            <li>{ `${id}`}</li>
-            <li>{ `${title}`}</li>
-            <li>{ `${description}`}</li>
-            <li>{ `${price}`}</li>
-            <li>{ `${pictureUrl}`}</li>
-      
-        </ul>
-    )
-} 
+const Item = ({ id, title, description, price, pictureUrl }) => {
+  return (
+    <div className="item">
+      {`${id}`}
+      {`${title}`}
+      {`${description}`}
+      {`${price}`}
+      {`${pictureUrl}`}
+    </div>
+  );
+};
 
 export default Item;

@@ -3,33 +3,17 @@ import  Item from "./Item";
 import getItems from "./ItemData"
 
 const ItemList = () => {
-  
-
   const [Items, setItems] = useState([]);
+  
   useEffect(() => {
-    getItems().then((data) => {
-              setItems(data);
-            })
-            .catch((error) => {
-              console.log(error);
-            }, []);
-
-
-        // setItems (ItemInicial)
+    getItems()
+      .then((data) => {
+        setItems(data);
+      })
+      .catch((error) => {
+        console.log(error);
+      }, []);
   });
-//   const getItem = new Promise((resolve, reject) => {
-//     setTimeout(() => {
-//       Items !== [] ? resolve(Item) : reject("No hay productos cargados");
-//     }, 2000);
-//   });
-
-  //   getItem
-  //     .then((data) => {
-  //       setItems(data);
-  //     })
-  //     .catch((error) => {
-  //       console.log(error);
-  //     }, []);
 
   return (
     <div className="ItemsList">
