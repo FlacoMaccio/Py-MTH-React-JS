@@ -1,4 +1,4 @@
-import { computeHeadingLevel } from '@testing-library/dom';
+// import { computeHeadingLevel } from '@testing-library/dom';
 import React, { Component } from 'react';
 import logo from '../assets/images/cart.svg';
 
