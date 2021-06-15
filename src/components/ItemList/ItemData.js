@@ -43,10 +43,18 @@ const listProducts = [
 
 
 
-export default function getItems() {
+export function getItems() {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       resolve(listProducts);
+    }, 2000);
+  });
+}
+
+export function getItem() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve(listProducts[2]);
     }, 2000);
   });
 }

@@ -1,7 +1,9 @@
+
 import ItemCount from "../ItemCount/ItemCount";
-// import ItemListContainer from "../ItemListContainer/ItemListContainer";
-const Item = ({ id, title, description, price, pictureUrl }) => {
-  return (
+
+
+function ItemDetail ({ id, title, description, price, pictureUrl }) {
+    return (
     <div className="grid">
       <div className="col-mb-2">
         <div className="card">
@@ -20,4 +22,10 @@ const Item = ({ id, title, description, price, pictureUrl }) => {
   );
 };
 
+
+ 
+
 export default Item;
+
+
+
