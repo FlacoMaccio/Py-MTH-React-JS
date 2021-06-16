@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import  {getItem}  from "./ItemData";
-import  Item from "./Item";
+import ItemDetail from "./ItemDetail";
 
 const ItemDetailContainer = () => {
     const [item, setItem] = useState([]);
@@ -17,7 +17,7 @@ const ItemDetailContainer = () => {
     });
   
     return (
-        <Item
+        <ItemDetail
         id={item.id}
         title={item.title}
         description={item.description}

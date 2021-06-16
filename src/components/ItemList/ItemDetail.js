@@ -8,11 +8,9 @@ function ItemDetail ({ id, title, description, price, pictureUrl }) {
       <div className="col-mb-2">
         <div className="card">
           <div className="item">
-            {/* {`${id}`} */}
             <h3 className="card-title">{`${title}`}</h3>
             <p className="card-text">{`${description}`}</p>
             <img className="card-img-top" className="img-thumbnail" src={`${pictureUrl}`}></img>
-            
             <h4>{`${price}`}</h4>
             <ItemCount initial={1} stock={8} />
           </div>
@@ -25,7 +23,7 @@ function ItemDetail ({ id, title, description, price, pictureUrl }) {
 
  
 
-export default Item;
+export default ItemDetail;
 
 
 

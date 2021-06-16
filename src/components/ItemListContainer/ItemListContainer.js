@@ -14,7 +14,7 @@ const ItemListContainer = () => {
         <div>
             <img src={logo} className="img-fluid" alt="logo"></img>
             <ItemsList />
-            <ItemCount initial={1} stock={8} onAdd={onAdd}/>
+            {/* <ItemCount initial={1} stock={8} onAdd={onAdd}/> */}
         </div>
     )
 }

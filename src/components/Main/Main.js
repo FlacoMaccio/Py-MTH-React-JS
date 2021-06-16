@@ -13,12 +13,10 @@ function Main() {
             <h1 className="menu-logo"> MTH CarDetail </h1>
             <div className="menu-icon"></div>
             <Navbar />
+            <ItemListContainer />
           </div>
         </Route>
-        <Route exact path="/ItemListConteiner">
-          <ItemListContainer />
-        </Route>
-        <Route>
+        <Route exact epath="/ItemDetailContainer">
           <ItemDetailContainer />
         </Route>
       </Switch>
