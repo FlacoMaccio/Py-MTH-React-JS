@@ -2,22 +2,31 @@ import Navbar from "../Navbar/NavBar";
 import "./Main.css";
 import ItemListContainer from "../ItemListContainer/ItemListContainer";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import ItemDetailContainer from "../ItemList/ItemDetailContainer";
+import ItemDetailContainer from "../ItemDetailContainer/ItemDetailContainer";
+import ItemList from "../ItemList/ItemList";
+
 
 function Main() {
   return (
     <BrowserRouter>
+      <Navbar />
+
       <Switch>
         <Route exact path="/">
-          <div className="App">
-            <h1 className="menu-logo"> MTH CarDetail </h1>
-            <div className="menu-icon"></div>
-            <Navbar />
+          <div className="Home">
             <ItemListContainer />
           </div>
         </Route>
-        <Route exact epath="/ItemDetailContainer">
+        <Route exact path="/ItemListContainer/">
+          <ItemListContainer />
+        </Route>
+
+        <Route path="/item/:itemId">
           <ItemDetailContainer />
+        </Route>
+
+        <Route exact epath="/ItemList">
+          <ItemList />
         </Route>
       </Switch>
     </BrowserRouter>
