@@ -9,7 +9,7 @@ const Item = ({ id, title, description, price, pictureUrl }) => {
         <div className="card">
           <div className="item">
             <h3 className="card-title">{`${title}`}</h3>
-            <Link to={`item/${id}`}>
+            <Link to={`/${id}`}>
               <img
                 className="img-thumbnail"
                 src={`${pictureUrl}`}

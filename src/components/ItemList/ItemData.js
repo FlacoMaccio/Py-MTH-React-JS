@@ -1,3 +1,6 @@
+import ItemCount from "../ItemCount/ItemCount";
+import Item from "./Item";
+
 const listProducts = [
   {
     id: 1,
@@ -54,7 +57,7 @@ export function getItems() {
 export function getItem() {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      resolve(listProducts[2]);
-    }, 2000);
+      resolve();
+    });
   });
 }

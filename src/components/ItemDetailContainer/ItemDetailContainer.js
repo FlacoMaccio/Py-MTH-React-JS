@@ -8,7 +8,7 @@ const ItemDetailContainer = () => {
   const { itemId } = useParams();
   useEffect(() => {
     console.log("este es item id: "+itemId);
-    getItem()
+    getItem(itemId)
       .then((data) => {
         console.log(data);
         setItem(data);
@@ -16,7 +16,7 @@ const ItemDetailContainer = () => {
       .catch((error) => {
         console.log(error);
       }, []);
-  }, [itemId]);
+  }, [item, itemId]);
 
   return (
     <ItemDetail

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-// import { MenuItems } from "./MenuItems"
+import { MenuItems } from "./MenuItems"
 import logo from "../../assets/images/logomth.png";
 import CartWidget from "../CarWidget";
 import { NavLink } from "react-router-dom";
@@ -24,17 +24,22 @@ class Navbar extends Component {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div className="navbar">
-              <NavLink activeClassName="selected" to={"/ItemList"}>
-                Productos
-              </NavLink>
+            <div className="top-bar">
+            <NavLink activeClassName="selected" to={""}>Servicios </NavLink>
+            <NavLink activeClassName="selected" to={"/ItemList"}>Productos </NavLink>
+            <NavLink activeClassName="selected" to={""}>Galeria </NavLink>
+
+               
+
               {/* {MenuItems.map((item) => {
                         return (
-                          <a className={`nav-link ${item.cName}`} href={item.url}>
+                          <a className={`nav ${item.cName}`} href={item.url}>
                             {item.titulo}
                           </a>
                         );
                     })} */}
+              
+
               <CartWidget />
             </div>
           </div>

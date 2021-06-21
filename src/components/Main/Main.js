@@ -21,7 +21,7 @@ function Main() {
           <ItemListContainer />
         </Route>
 
-        <Route path="/item/:itemId">
+        <Route exact path="/item/:itemId">
           <ItemDetailContainer />
         </Route>
 
