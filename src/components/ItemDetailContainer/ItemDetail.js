@@ -12,7 +12,7 @@ function ItemDetail ({ id, title, description, price, pictureUrl }) {
             <p className="card-text">{`${description}`}</p>
             <img className="img-thumbnail" alt="..." src={`${pictureUrl}`}></img>
             <h4>{`${price}`}</h4>
-            <ItemCount initial={1} stock={8} />
+            <ItemCount initial={0} stock={8}  />
           </div>
         </div>
       </div>

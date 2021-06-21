@@ -1,19 +1,24 @@
 import React, { useEffect, useState } from 'react';
 import './ItemCount.css';
 
-const ItemCount = ({initial, stock, onAdd}) => {
+const ItemCount = ({initial, stock, add}) => {
     
 const [items, setItems] = useState(initial)
   const addItems = () => {
     items < stock ? setItems(items+1) : alert ("Stock Agotado");
   }
   const removeItems = () => {
-    1 == items ? alert('El minimo de ventas es 1 unidad') : setItems(items-1); 
+    0 == items ? alert('El minimo de ventas es 1 unidad') : setItems(items-1); 
   }
   const agregarAlCarrito = () => {
     alert (`Agregaste ${items} al carrito`);
-    setItems(1);
+    setItems(0);
   }
+  const terminarCompra = () => {
+    items >= 1 ? alert(`Desea terminar la comprar? Agregaste ${items} al carrito`) :
+    setItems(0);  
+    }
+  
   return (
     <div className="flex-container">
       
@@ -22,8 +27,14 @@ const [items, setItems] = useState(initial)
         <span className="counterAmount">{items}</span>        
         <i className="far fa-plus-square counterButton" onClick={addItems}></i>            
       </div>
-      <button className='btn btn-secondary' onClick = {agregarAlCarrito}> Agregar al carrito
-      </button>
+      <div>
+      {items >= 1 ? (
+        <button className='btn btn-secondary' onClick= {terminarCompra}> Terminar compra</button>
+      ) : (
+        <button className='btn btn-secondary' onClick={agregarAlCarrito}> Agregar producto</button>
+      )}
+      </div>
+      
     </div>
   );
 }
