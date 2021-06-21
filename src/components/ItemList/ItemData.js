@@ -61,12 +61,26 @@ export function getItems() {
   });
 }
 
+export function getItemByCategory(category) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const products = [];
+      for (const product of listProducts) {
+        if (product.category == category) {
+          products.push(product);
+        }
+      }
+      resolve(products);
+    }, 2000);
+  });
+}
+
 export function getItem(itemid) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       for (const product of listProducts) {
         if (product.id == itemid) {
-             resolve(product);
+          resolve(product);
         }
       }
     }, 2000);
