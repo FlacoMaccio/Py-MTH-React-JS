@@ -10,7 +10,7 @@ function Main() {
   return (
     <BrowserRouter>
       <Navbar />
-
+      
       <Switch>
         <Route exact path="/">
           <div className="Home">
@@ -25,10 +25,17 @@ function Main() {
           <ItemDetailContainer />
         </Route>
 
-        <Route exact epath="/ItemList">
+        <Route exact path="/ItemList">
           <ItemList />
         </Route>
+
+        <Route exact path="/category/:categoryid">
+          <ItemList/>
+         </Route>
+
+
       </Switch>
+      
     </BrowserRouter>
   );
 }
