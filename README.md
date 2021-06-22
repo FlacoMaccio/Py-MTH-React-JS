@@ -1,70 +1,31 @@
-# Getting Started with Create React App
+#  PY-MTHCARDETAIL-REACJS
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#### Este es un proyecto para MTH CarDetail, una empresa que brinda servicios de Detailing asi com tambien la venta de productos del rubro. 
 
-## Available Scripts
+*Justamente el proyecto se centra en crear el ecommerce de la empresa.*
 
-In the project directory, you can run:
+*Principalmente se utilizo React JS para el desarrollo de la misma, y el framework Boostrap para aportar los estilos principales.*
 
-### `npm start`
+En el proyecto podemos encontrar los siguientes componentes principales:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+ 1. #### NavBar
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+    Dentro de esta encontramos distintas secciones que nos muestran los productos dependiendo la categoria de los mismos o bien directamtne un listado con todos los productos.
 
-### `npm test`
+ 2. #### ItemList
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    Muestra el listado de productos.
 
-### `npm run build`
+ 3. #### ItemDetail
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    Muestra el detale de cada prpoducto al seleccionarlo.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+ 4. #### ItemCount
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    Este elemento es el que nos permite agregar/quitar "X" cantidad de items de un mismo producto al componente Cart, siendo la compra minima 1 producto.
 
-### `npm run eject`
+ 5. #### Cart 
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![Tienda Online MTH Demo](./francomaccio-mthreact.gif)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
