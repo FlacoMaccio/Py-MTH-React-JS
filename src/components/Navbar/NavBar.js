@@ -25,12 +25,12 @@ class Navbar extends Component {
           </button>
           <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div className="top-bar">
-            <NavLink className="selected" to={"/ItemList"}>Todos los Productos</NavLink>
-            <NavLink className="selected" to={`/category/Lavado`}>Lavado</NavLink>
-            <NavLink className="selected" to={`/category/Protecciondepintura`}>Proteccion</NavLink>
-            <NavLink className="selected" to={`/category/Mantenimiento`}>Mantenimiento</NavLink>
-            <NavLink className="selected" to={`/category/Acondicionadores`}>Acondicionadores</NavLink>
-            <NavLink className="selected" to={`/category/Micros`}>Micros</NavLink>
+            <NavLink className="nav" to={"/ItemList"}>Todos los Productos</NavLink>
+            <NavLink className="nav" to={`/category/Lavado`}>Lavado</NavLink>
+            <NavLink className="nav" to={`/category/Protecciondepintura`}>Proteccion</NavLink>
+            <NavLink className="nav" to={`/category/Mantenimiento`}>Mantenimiento</NavLink>
+            <NavLink className="nav" to={`/category/Acondicionadores`}>Acondicionadores</NavLink>
+            <NavLink className="nav" to={`/category/Micros`}>Micros</NavLink>
 
 
 
