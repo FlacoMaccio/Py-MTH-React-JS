@@ -3,7 +3,7 @@ import "./Main.css";
 import ItemListContainer from "../ItemListContainer/ItemListContainer";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import ItemDetailContainer from "../ItemDetailContainer/ItemDetailContainer";
-import ItemList from "../ItemList/ItemList";
+import ItemList from "../ItemListContainer/ItemList/ItemList";
 
 
 function Main() {
@@ -26,11 +26,11 @@ function Main() {
         </Route>
 
         <Route exact path="/ItemList">
-          <ItemList />
+          <ItemListContainer />
         </Route>
 
         <Route exact path="/category/:categoryid">
-          <ItemList/>
+          <ItemListContainer/>
          </Route>
 
 

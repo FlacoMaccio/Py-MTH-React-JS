@@ -1,8 +1,10 @@
-import ItemCount from "../ItemCount/ItemCount";
+// import ItemCount from "../../ItemCount/ItemCount";
 import { Link } from "react-router-dom";
-// import ItemDetail from "../ItemDetailContainer/ItemDetail";
 
 const Item = ({ id, title, description, price, pictureUrl }) => {
+  const onAdd = (amount) => {
+    console.log(`realizaste la compra de ${amount}`);
+  };
   return (
     <div className="grid">
       <div className="col-mb-2">
@@ -17,7 +19,7 @@ const Item = ({ id, title, description, price, pictureUrl }) => {
               ></img>
             </Link>
             <h4>{`${price}`}</h4>
-            <ItemCount initial={0} stock={8} />
+            {/* <ItemCount initial={0} stock={8} onAdd={onAdd} /> */}
           </div>
         </div>
       </div>

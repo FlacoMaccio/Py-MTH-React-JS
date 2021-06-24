@@ -1,7 +1,4 @@
-import ItemCount from "../ItemCount/ItemCount";
-import Item from "./Item";
-
-const listProducts = [
+export const listProducts = [
   {
     id: 1,
     title: "Shampoo NXT",
@@ -53,6 +50,7 @@ const listProducts = [
   },
 ];
 
+
 export function getItems() {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
@@ -86,3 +84,5 @@ export function getItem(itemid) {
     }, 2000);
   });
 }
+
+
