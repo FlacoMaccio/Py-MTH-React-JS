@@ -1,7 +1,7 @@
 import ItemCount from "../ItemCount/ItemCount";
 import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
-import CartContext from "../../context/cartContext";
+import CartContext from "../../Context/CartContext";
 
 function ItemDetail({ id, title, description, price, pictureUrl }) {
   const cartHandler = useContext(CartContext);

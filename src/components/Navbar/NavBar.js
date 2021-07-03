@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { MenuItems } from "./MenuItems"
 import logo from "../../assets/images/logomth.png";
-import CartWidget from "../CartWidget";
+import CartWidget from "../CartWidget/CartWidget";
 import { NavLink } from "react-router-dom";
 
 class Navbar extends Component {

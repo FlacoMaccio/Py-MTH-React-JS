@@ -1,6 +1,6 @@
 import React, {useState } from 'react';
 
-import CartContext from '../context/CartContext';
+import CartContext from '../../Context/CartContext';
 
 export default function CartProvider({ defaultValue = [], children }) {
   const [cart, setCart] = useState(defaultValue);
