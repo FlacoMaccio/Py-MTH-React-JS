@@ -1,13 +1,22 @@
 import ItemCount from "../ItemCount/ItemCount";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
+import CartContext from "../../context/cartContext";
 
 function ItemDetail({ id, title, description, price, pictureUrl }) {
-  const [agregado, setAgregado] = useState(0);
+  const cartHandler = useContext(CartContext);
+ 
   const onAdd = (amount) => {
     console.log(`Agregaste ${amount} productos`);
-    setAgregado(amount);
+    const cartItem = {
+      item: { id, title, description, price, pictureUrl },
+      quantity: amount,
+      id: id,
+    };
+    cartHandler.addToCart(cartItem);
   };
+
+  const agregado = cartHandler.isInCart ({id})
 
   return (
     <div className="grid">
@@ -22,6 +31,7 @@ function ItemDetail({ id, title, description, price, pictureUrl }) {
               src={`${pictureUrl}`}
             ></img>
             <h4>{`${price}`}</h4>
+
             {agregado && <Link to="/cart">Terminar compra</Link>}
             {!agregado && <ItemCount initial={0} stock={8} onAdd={onAdd} />}
           </div>
