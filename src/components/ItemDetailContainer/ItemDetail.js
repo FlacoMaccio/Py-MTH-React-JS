@@ -14,6 +14,7 @@ function ItemDetail({ id, title, description, price, pictureUrl }) {
 
   const agregado = cartHandler.isInCart ({id})
 
+  const removeItem = () => { cartHandler.removeItem({ id, title, description, price, pictureUrl }); };
   return (
     <div className="grid">
       <div className="col-mb-2">
@@ -29,6 +30,7 @@ function ItemDetail({ id, title, description, price, pictureUrl }) {
             <h4>{`${price}`}</h4>
 
             {agregado && <Link to="/cart">Terminar compra</Link>}
+            {agregado && <button onClick={removeItem}> Borrar item</button>}
             {!agregado && <ItemCount initial={0} stock={8} onAdd={onAdd} />}
           </div>
         </div>

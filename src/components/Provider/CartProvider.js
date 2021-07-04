@@ -36,6 +36,18 @@ export default function CartProvider({ defaultValue = [], children }) {
     setCart([...cart, cartItem]);
     console.log("Elemento agregado!");
   }
+
+  function removeItem(item) {
+    if (isInCart(item)) {
+      const filteredCart = cart.filter((cartItem) => cartItem.id !== item.id);
+      setCart(filteredCart);
+    }
+  }
+
+  function clearCart() {
+    setCart([]);
+  }
+
   return (
     <CartContext.Provider
       value={{
@@ -44,6 +56,8 @@ export default function CartProvider({ defaultValue = [], children }) {
         isInCart,
         cartSize: cart.length,
         getItemsCount,
+        clearCart,
+        removeItem,
       }}
     >
       {children}
