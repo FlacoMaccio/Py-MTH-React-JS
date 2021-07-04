@@ -8,12 +8,8 @@ function ItemDetail({ id, title, description, price, pictureUrl }) {
  
   const onAdd = (amount) => {
     console.log(`Agregaste ${amount} productos`);
-    const cartItem = {
-      item: { id, title, description, price, pictureUrl },
-      quantity: amount,
-      id: id,
-    };
-    cartHandler.addToCart(cartItem);
+    const item = { id, title, description, price, pictureUrl };
+     cartHandler.addToCart(item, amount);
   };
 
   const agregado = cartHandler.isInCart ({id})
