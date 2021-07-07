@@ -1,5 +1,5 @@
 // import { computeHeadingLevel } from '@testing-library/dom';
-import React, { Component, useContext } from "react";
+import React, { useContext } from "react";
 import logo from "../../assets/images/cart.svg";
 import CartContext from "../../Context/CartContext";
 import "./CartWidget.css";

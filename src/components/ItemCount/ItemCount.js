@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./ItemCount.css";
 
-const ItemCount = ({ initial, stock, onAdd }) => {
+const ItemCount = ({ initial, stock, onAdd, label }) => {
   const [items, setItems] = useState(initial);
   const addItems = () => {
     items < stock ? setItems(items + 1) : alert("Stock Agotado");
@@ -22,7 +22,7 @@ const ItemCount = ({ initial, stock, onAdd }) => {
       </div>
       <div>
         <button className="btn btn-secondary" onClick={() => onAdd(items)}>
-          Agregar producto
+          {label}
         </button>
       </div>
     </div>
