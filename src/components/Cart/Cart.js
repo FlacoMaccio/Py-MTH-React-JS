@@ -8,7 +8,8 @@ const Cart = () => {
 
   return (
     <div>
-      <h1>Estos son los productos agregados</h1>
+      <h3> Cantidad total de items {cartHandler.getItemsCount()} </h3>
+      <h3> Monto Total ${cartHandler.getCartTotal()} </h3>      
       <CartList cartItems={cartHandler.cart} />
     
     </div>

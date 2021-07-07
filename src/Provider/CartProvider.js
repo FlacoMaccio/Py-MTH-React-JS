@@ -21,6 +21,14 @@ export default function CartProvider({ defaultValue = [], children }) {
     return count;
   }
 
+  function getCartTotal() {
+    let total = 0;
+    cart.forEach((cartItem) => {
+      total = total + cartItem.item.price * cartItem.quantity;
+    });
+    return total;
+  }
+
   function addToCart(item, quantity) {
     const cartItem = {
       item: item,
@@ -48,19 +56,17 @@ export default function CartProvider({ defaultValue = [], children }) {
     setCart([]);
   }
 
+  const cartHandler = {
+    cart,
+    addToCart,
+    isInCart,
+    cartSize: cart.length,
+    getItemsCount,
+    clearCart,
+    removeItem,
+    getCartTotal,
+  };
   return (
-    <CartContext.Provider
-      value={{
-        cart,
-        addToCart,
-        isInCart,
-        cartSize: cart.length,
-        getItemsCount,
-        clearCart,
-        removeItem,
-      }}
-    >
-      {children}
-    </CartContext.Provider>
+    <CartContext.Provider value={cartHandler}>{children}</CartContext.Provider>
   );
 }
