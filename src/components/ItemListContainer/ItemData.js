@@ -1,4 +1,4 @@
-import  {getFirestore}  from "../../index"
+import { getFirestore } from "../../index";
 
 export const listProducts = [
   {
@@ -52,16 +52,22 @@ export const listProducts = [
   },
 ];
 
-
 export function getItems() {
   const db = getFirestore();
-  const itemCollection = db.collection("item").get()
-  return itemCollection; 
+  const itemCollection = db.collection("item").get();
+  return itemCollection;
 }
 
 export function getItem(itemid) {
   const db = getFirestore();
-    const itemCollection = db.collection('item');
-    const item = itemCollection.doc(itemid);
-    return item.get()
+  const itemCollection = db.collection("item");
+  const item = itemCollection.doc(itemid);
+  return item.get();
+}
+
+export function getItemsByCategory(category) {
+  const db = getFirestore();
+  const itemCollection = db.collection("item");
+  const item = itemCollection.where("category", "==", category);
+  return item.get();
 }

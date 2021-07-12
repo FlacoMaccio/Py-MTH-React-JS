@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { getItemByCategory, getItems } from "./ItemData";
+import { getItemsByCategory, getItems } from "./ItemData";
 
 import { useParams } from "react-router-dom";
 import ItemList from "./ItemList/ItemList";
@@ -18,13 +18,9 @@ const ItemListContainer = () => {
           console.log(error);
         }, []);
     } else {
-      getItems(categoryid)
+      getItemsByCategory(categoryid)
         .then((data) => {
-          setItems(
-            data.docs
-              .map((doc) => ({ id: doc.id, ...doc.data() }))
-              .filter((item) => item.category === categoryid)
-          );
+          setItems(data.docs.map((doc) => ({ id: doc.id, ...doc.data() })));
         })
         .catch((error) => {
           console.log(error);
