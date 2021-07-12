@@ -3,17 +3,17 @@ import CartContext from "../../Context/CartContext";
 import ItemCount from "../ItemCount/ItemCount";
 
 const Cart = () => {
-  const cartHandler = useContext(CartContext);
+  const {getItemsCount, getCartTotal, cart} = useContext(CartContext);
   const onAdd = (amount) => {
     console.log(`realizaste la compra de ${amount}`);
   };
 
   return (
     <div>
-      <h3> Cantidad total de items {cartHandler.getItemsCount()} </h3>
-      <h3> Monto Total ${cartHandler.getCartTotal()} </h3>
+      <h3> Cantidad total de items {getItemsCount()} </h3>
+      <h3> Monto Total ${getCartTotal()} </h3>
       <div className="CartList">
-        {cartHandler.cart.map((cartItem) => {
+        {cart.map((cartItem) => {
           return (
             <div className="grid">
               <div className="col-mb-2">

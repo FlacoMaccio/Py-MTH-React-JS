@@ -5,12 +5,12 @@ import CartContext from "../../Context/CartContext";
 import "./CartWidget.css";
 
 const CarWidget = () => {
-  const cartHandler = useContext(CartContext);
+  const { getItemsCount } = useContext(CartContext);
 
   return (
     <div className="cartIcono">
       <img alt="logo" className="logo" src={logo}></img>
-      <label className="cartnumber"> {cartHandler.getItemsCount()} </label>
+      <label className="cartnumber"> {getItemsCount()} </label>
     </div>
   );
 };
