@@ -4,20 +4,22 @@ import ItemDetail from "./ItemDetail";
 import { useParams } from "react-router-dom";
 
 const ItemDetailContainer = () => {
-  const [item, setItem] = useState([]);
+  const [item, setItem] = useState({});
   const { itemId } = useParams();
   useEffect(() => {
-    console.log("este es item id: "+itemId);
+    console.log("este es item id: " + itemId);
     getItem(itemId)
-      .then((data) => {
-        console.log(data);
-        setItem(data);
+      .then((doc) => {
+        if (!doc.exists) {
+          console.log("Item no encontrado");
+          return;
+        }
+        setItem({ id: doc.id, ...doc.data() });
       })
       .catch((error) => {
         console.log(error);
-      }, []);
-  }, [item, itemId]);
-
+      });
+  }, [itemId]);
   return (
     <ItemDetail
       id={item.id}

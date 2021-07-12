@@ -4,7 +4,6 @@ import { getItemByCategory, getItems } from "./ItemData";
 import { useParams } from "react-router-dom";
 import ItemList from "./ItemList/ItemList";
 
-
 const ItemListContainer = () => {
   const [Items, setItems] = useState([]);
   const { categoryid } = useParams();
@@ -13,15 +12,19 @@ const ItemListContainer = () => {
     if (categoryid === undefined) {
       getItems()
         .then((data) => {
-          setItems(data);
+          setItems(data.docs.map((doc) => ({ id: doc.id, ...doc.data() })));
         })
         .catch((error) => {
           console.log(error);
         }, []);
     } else {
-      getItemByCategory(categoryid)
+      getItems(categoryid)
         .then((data) => {
-          setItems(data);
+          setItems(
+            data.docs
+              .map((doc) => ({ id: doc.id, ...doc.data() }))
+              .filter((item) => item.category === categoryid)
+          );
         })
         .catch((error) => {
           console.log(error);
@@ -29,10 +32,7 @@ const ItemListContainer = () => {
     }
   }, [Items, categoryid]);
 
-  return (
-    <ItemList  items={Items}/>
-  );
+  return <ItemList items={Items} />;
 };
 
 export default ItemListContainer;
-

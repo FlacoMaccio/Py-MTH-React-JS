@@ -27,7 +27,7 @@ class Navbar extends Component {
             <div className="top-bar">
             <NavLink className="nav" to={"/ItemList"}>Todos los Productos</NavLink>
             <NavLink className="nav" to={`/category/Lavado`}>Lavado</NavLink>
-            <NavLink className="nav" to={`/category/Protecciondepintura`}>Proteccion</NavLink>
+            <NavLink className="nav" to={`/category/Proteccion`}>Proteccion</NavLink>
             <NavLink className="nav" to={`/category/Mantenimiento`}>Mantenimiento</NavLink>
             <NavLink className="nav" to={`/category/Acondicionadores`}>Acondicionadores</NavLink>
             <NavLink className="nav" to={`/category/Micros`}>Micros</NavLink>

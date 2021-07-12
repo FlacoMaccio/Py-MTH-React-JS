@@ -17,7 +17,7 @@ export const listProducts = [
     description:
       "Cera Sintentica Meguiars, otorga acabados  con mayor profundidad de color y reflejos más intensos. Contenido Neto: 311 grs",
     price: 4500,
-    category: "Protecciondepintura",
+    category: "Proteccion",
     pictureUrl:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQX03Xdy0fFcaQVFkuIER4VLJJ8c4_YiyGeFfMlt3VWBuKMv1hv9Ih8XdeVppET0Oe0_xmhg463&usqp=CAc",
   },
@@ -55,39 +55,13 @@ export const listProducts = [
 
 export function getItems() {
   const db = getFirestore();
-  const itemCollection = db.collection("item")
-    // return (itemCollection)
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve(itemCollection);
-    }, 2000);
-  });
-}
-
-export function getItemByCategory(category) {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      const products = [];
-      for (const product of listProducts) {
-        if (product.category == category) {
-          products.push(product);
-        }
-      }
-      resolve(products);
-    }, 2000);
-  });
+  const itemCollection = db.collection("item").get()
+  return itemCollection; 
 }
 
 export function getItem(itemid) {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      for (const product of listProducts) {
-        if (product.id == itemid) {
-          resolve(product);
-        }
-      }
-    }, 2000);
-  });
+  const db = getFirestore();
+    const itemCollection = db.collection('item');
+    const item = itemCollection.doc(itemid);
+    return item.get()
 }
-
-
