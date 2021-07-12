@@ -1,3 +1,5 @@
+import  {getFirestore}  from "../../index"
+
 export const listProducts = [
   {
     id: 1,
@@ -52,9 +54,12 @@ export const listProducts = [
 
 
 export function getItems() {
+  const db = getFirestore();
+  const itemCollection = db.collection("item")
+    // return (itemCollection)
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      resolve(listProducts);
+      resolve(itemCollection);
     }, 2000);
   });
 }
