@@ -9,12 +9,12 @@ const Cart = () => {
   const saveOrder = () => {
     const orderItems = [];
     cart.forEach(cartItem => {
-    const orderItem = { 
-      id:cartItem.id,
-      title:cartItem.item.title,
-      price:cartItem.item.price,
-    }
-      
+      const orderItem = {
+        id: cartItem.id,
+        title: cartItem.item.title,
+        price: cartItem.item.price,
+      }
+      orderItems.push(orderItem);
     });
     const newOrder = {
       buyer: {
@@ -22,20 +22,14 @@ const Cart = () => {
         name: 'Ignacio Aedo',
         phone: '+56989786677'
       },
-     
-      total: 1000,
-      items: [
-        { 
-          id: 'gO5wp6H1V4JtUzB2XFhC',
-          title: 'Articulo insertado 1',
-          price: 1000
-        }
-      ]
+
+      total: getCartTotal(),
+      items: orderItems,
     };
     addOrder(newOrder)
       .then(({ id }) => {
 
-        console.log(`Elemen to creado. ID: ${id}`);
+        alert(`Orden Creada. Este es tu ID: ${id}`);
       })
       .catch(error => {
 
@@ -69,7 +63,7 @@ const Cart = () => {
                       stock={8}
                       onAdd={onAdd}
                       label={"Terminar Compra"}
-                    />                    
+                    />
                   </div>
                 </div>
               </div>
