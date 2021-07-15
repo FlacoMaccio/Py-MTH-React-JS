@@ -54,8 +54,8 @@ export const listProducts = [
 
 export function getItems() {
   const db = getFirestore();
-  const itemCollection = db.collection("item").get();
-  return itemCollection;
+  const itemCollection = db.collection("item")  
+  return itemCollection.get();
 }
 
 export function getItem(itemid) {
@@ -70,4 +70,11 @@ export function getItemsByCategory(category) {
   const itemCollection = db.collection("item");
   const item = itemCollection.where("category", "==", category);
   return item.get();
+}
+
+
+export function addOrder(order) {
+  const db = getFirestore();
+  const orderCollection = db.collection("orders");
+  return orderCollection.add(order); 
 }
