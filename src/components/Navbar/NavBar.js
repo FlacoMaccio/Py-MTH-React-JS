@@ -9,7 +9,7 @@ class Navbar extends Component {
     return (
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <NavLink to={"/"}>
-        <img alt="logo" className="logo" src={logo}></img>
+          <img alt="logo" className="logo" src={logo}></img>
         </NavLink>
         <div className="container-fluid">
           <button
@@ -25,26 +25,14 @@ class Navbar extends Component {
           </button>
           <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div className="top-bar">
-            <NavLink className="nav" to={"/ItemList"}>Todos los Productos</NavLink>
-            <NavLink className="nav" to={`/category/Lavado`}>Lavado</NavLink>
-            <NavLink className="nav" to={`/category/Proteccion`}>Proteccion</NavLink>
-            <NavLink className="nav" to={`/category/Mantenimiento`}>Mantenimiento</NavLink>
-            <NavLink className="nav" to={`/category/Acondicionadores`}>Acondicionadores</NavLink>
-            <NavLink className="nav" to={`/category/Micros`}>Micros</NavLink>
+              <NavLink className="nav" to={"/ItemList"}>Todos los Productos</NavLink>
+              <NavLink className="nav" to={`/category/Lavado`}>Lavado</NavLink>
+              <NavLink className="nav" to={`/category/Proteccion`}>Proteccion</NavLink>
+              <NavLink className="nav" to={`/category/Mantenimiento`}>Mantenimiento</NavLink>
+              <NavLink className="nav" to={`/category/Acondicionadores`}>Acondicionadores</NavLink>
+              <NavLink className="nav" to={`/category/Micros`}>Micros</NavLink>
 
 
-
-
-               
-
-              {/* {MenuItems.map((item) => {
-                        return (
-                          <a className={`nav ${item.cName}`} href={item.url}>
-                            {item.titulo}
-                          </a>
-                        );
-                    })} */}
-              
 
               <CartWidget />
             </div>

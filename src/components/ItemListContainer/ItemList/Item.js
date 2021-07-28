@@ -13,7 +13,7 @@ const Item = ({ id, title, description, price, pictureUrl }) => {
             <h3 className="card-title">{`${title}`}</h3>
             <Link to={`/item/${id}`}>
               <img
-                className="img-thumbnail"
+                className="img-fluid"
                 src={`${pictureUrl}`}
                 alt="..."
               ></img>

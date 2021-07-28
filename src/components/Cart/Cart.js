@@ -4,10 +4,14 @@ import ItemCount from "../ItemCount/ItemCount";
 import { addOrder } from "../ItemListContainer/ItemData";
 
 const Cart = () => {
-  const { getItemsCount, getCartTotal, cart } = useContext(CartContext);
+  const { getItemsCount, getCartTotal, cart, removeItem } = useContext(CartContext);
 
   const saveOrder = () => {
     const orderItems = [];
+    if (getItemsCount() == 0) {
+      alert("El carrito se encuentra vacio")
+      return;
+    }
     cart.forEach(cartItem => {
       const orderItem = {
         id: cartItem.id,
@@ -37,12 +41,6 @@ const Cart = () => {
       });
   }
 
-
-  const onAdd = (amount) => {
-    console.log(`realizaste la compra de ${amount}`);
-  };
-
-
   return (
     <div>
       <h3> Cantidad total de items {getItemsCount()} </h3>
@@ -61,8 +59,8 @@ const Cart = () => {
                     <ItemCount
                       initial={cartItem.item.quantity}
                       stock={8}
-                      onAdd={onAdd}
-                      label={"Terminar Compra"}
+                      onAction={() => { removeItem(cartItem.item) }}
+                      label={"Quitar del carrito"}
                     />
                   </div>
                 </div>

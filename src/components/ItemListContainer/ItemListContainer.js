@@ -20,13 +20,14 @@ const ItemListContainer = () => {
     } else {
       getItemsByCategory(categoryid)
         .then((data) => {
+          console.log(data);
           setItems(data.docs.map((doc) => ({ id: doc.id, ...doc.data() })));
         })
         .catch((error) => {
           console.log(error);
         }, []);
     }
-  }, [Items, categoryid]);
+  }, [categoryid]);
 
   return <ItemList items={Items} />;
 };
