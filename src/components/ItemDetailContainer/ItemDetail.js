@@ -2,6 +2,7 @@ import ItemCount from "../ItemCount/ItemCount";
 import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import CartContext from "../../Context/CartContext";
+import "./ItemDetail.css";
 
 function ItemDetail({ id, title, description, price, pictureUrl }) {
   const cartHandler = useContext(CartContext);
@@ -23,11 +24,11 @@ function ItemDetail({ id, title, description, price, pictureUrl }) {
             <h3 className="card-title">{`${title}`}</h3>
             <p className="card-text">{`${description}`}</p>
             <img
-              className="img-thumbnail"
+              className="img-item"
               alt="..."
               src={`${pictureUrl}`}
             ></img>
-            <h4>{`${price}`}</h4>
+            <h4>{`$${price}`}</h4>
 
             {agregado && <Link to="/cart">Terminar compra</Link>}
             {agregado && <button onClick={removeItem}> Borrar item</button>}

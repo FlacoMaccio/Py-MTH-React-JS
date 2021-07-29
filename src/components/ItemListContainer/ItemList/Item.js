@@ -1,5 +1,6 @@
 // import ItemCount from "../../ItemCount/ItemCount";
 import { Link } from "react-router-dom";
+import "./Item.css";
 
 const Item = ({ id, title, description, price, pictureUrl }) => {
   const onAdd = (amount) => {
@@ -13,12 +14,12 @@ const Item = ({ id, title, description, price, pictureUrl }) => {
             <h3 className="card-title">{`${title}`}</h3>
             <Link to={`/item/${id}`}>
               <img
-                className="img-fluid"
+                className="img-item"
                 src={`${pictureUrl}`}
                 alt="..."
               ></img>
             </Link>
-            <h4>{`${price}`}</h4>
+            <h4>{`$${price}`}</h4>
             {/* <ItemCount initial={0} stock={8} onAdd={onAdd} /> */}
           </div>
         </div>

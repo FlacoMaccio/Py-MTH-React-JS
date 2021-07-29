@@ -1,0 +1,33 @@
+.img-item {
+    padding: .25rem;
+    /* background-color: #000; */
+    border: 1px solid #dee2e6;
+    border-radius: .25rem;
+    max-width: auto;
+    height: 300px;
+}
+.card {
+    margin-top: 20px; }
+    .card .card-body {
+      padding: 5px; }
+  
+  /* Nuestros servicios con boostrap */
+  .card-title {
+    color: #F51010;
+    text-shadow: 1px 1px 1px #000; }
+  
+  .text-sub {
+    color: #FFFFFF; }
+  
+  .card {
+    background-image: linear-gradient(to right, grey, black);
+    padding: 20px;
+    border-radius: 4px;
+    color: #FFFFFF; }
+
+.container-item {
+    display: flex;    
+    height: 300px;
+
+
+  }
