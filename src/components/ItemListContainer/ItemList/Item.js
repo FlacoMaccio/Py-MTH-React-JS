@@ -7,10 +7,10 @@ const Item = ({ id, title, description, price, pictureUrl }) => {
     console.log(`realizaste la compra de ${amount}`);
   };
   return (
-    <div className="grid">
-      <div className="col-mb-2">
-        <div className="card">
-          <div className="item">
+    <div className="row row-cols-1 row-cols-md-4 g-8">
+      <div className="card mb-3">
+        <div className="card row">
+          <div className="card-body">
             <h3 className="card-title">{`${title}`}</h3>
             <Link to={`/item/${id}`}>
               <img
