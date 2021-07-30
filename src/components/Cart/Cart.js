@@ -27,7 +27,6 @@ const Cart = () => {
         name: name,
         phone: phone,
         email: mail,
-
       },
 
       total: getCartTotal(),
@@ -46,13 +45,11 @@ const Cart = () => {
     <div>
       <h3> Cantidad total de items {getItemsCount()} </h3>
       <h3> Monto Total ${getCartTotal()} </h3>
-      <button onClick={() => saveOrder()}> Comprar </button>
       <div className="container">
         <div className="row">
-          
-
           <div className="col">
             <div className="CartList">
+              {getItemsCount() === 0 && <h3>Tu carrito esta vacio</h3>}
               {cart.map((cartItem) => {
                 return (
                   <div className="grid">
@@ -79,9 +76,8 @@ const Cart = () => {
             </div>
           </div>
           <div className="col">
-            <CartForm onAction= {saveOrder}/>
+            <CartForm onAction={saveOrder} />
           </div>
-
         </div>
       </div>
     </div>
