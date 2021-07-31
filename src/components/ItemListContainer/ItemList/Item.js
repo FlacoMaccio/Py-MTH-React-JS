@@ -7,11 +7,11 @@ const Item = ({ id, title, description, price, pictureUrl }) => {
     console.log(`realizaste la compra de ${amount}`);
   };
   return (
-    <div className="row row-cols-1 row-cols-md-4 g-8">
-      <div className="card mb-3">
-        <div className="card row">
+    <div className="flex-container">
+      <div className="flex-item">
+        
           <div className="card-body">
-            <h3 className="card-title">{`${title}`}</h3>
+            <h3 className="title">{`${title}`}</h3>
             <Link to={`/item/${id}`}>
               <img
                 className="img-item"
@@ -23,7 +23,7 @@ const Item = ({ id, title, description, price, pictureUrl }) => {
             {/* <ItemCount initial={0} stock={8} onAdd={onAdd} /> */}
           </div>
         </div>
-      </div>
+      
     </div>
   );
 };

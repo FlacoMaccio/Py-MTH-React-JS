@@ -1,4 +1,7 @@
 .Home {
+  /* background: grey; */
+
+
   text-align: center;
 }
 
@@ -25,7 +28,7 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: #ac0202;
 }
 
 @keyframes App-logo-spin {

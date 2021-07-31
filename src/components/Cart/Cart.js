@@ -57,15 +57,15 @@ const Cart = () => {
                       <div className="card">
                         <div className="item">
                           <h3 className="card-title">{`${cartItem.item.title}`}</h3>
-                          <h4>{`${cartItem.item.price}`}</h4>
-                          <h5>{`${cartItem.quantity}`}</h5>
+                          <h4>{`$${cartItem.item.price}`}</h4>
+                          {/* <h5>{`${cartItem.quantity}`}</h5> */}
                           <img
                             className="img-item"
                             alt="..."
                             src={`${cartItem.item.pictureUrl}`}
                           ></img>
                           <ItemCount
-                            initial={cartItem.item.quantity}
+                            // initial={cartItem.item.quantity}
                             stock={8}
                             onAction={() => {
                               removeItem(cartItem.item);

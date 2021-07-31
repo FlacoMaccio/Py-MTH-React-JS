@@ -1,24 +1,28 @@
-.container {
-  background-color: gray;
+.container-count {
+  /* background-color: gray; */
   border: 2px solid black;
-  width: 100px;
+  width: auto;
   align-items: center;
   justify-content: center;
   margin-bottom: 100px;
   margin-top: 30px;
   display: inline-flex;
+  text-align: center;
 }
 
 .container-counter {
+  padding: 2px;
+  margin-left: 20px;
   text-align: center;
   justify-content: center;
-  width: 100px;
+  width: auto;
+  height: 30px;
   border: 2px solid black;
 }
 
 .far counterButton {
   margin-left: 50px;
-  float: right;
+  float: left;
   justify-content: center;
   box-sizing: border-box;
   display: flex;

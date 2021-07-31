@@ -11,7 +11,7 @@ const ItemCount = ({ initial, stock, onAction, label }) => {
   };
 
   return (
-    <div className="container">
+    <div className="container-count">
       <div className="container-counter">
         <i
           className="far fa-minus-square counterButton"

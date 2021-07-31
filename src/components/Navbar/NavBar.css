@@ -1,4 +1,6 @@
 .nav-item {
     margin: 30px;
     font-size: 18px;
+    color: rgb(218, 12, 12);
+    text-decoration: none;
 }

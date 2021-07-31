@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import logo from "../../assets/images/logomth.png";
 import CartWidget from "../CartWidget/CartWidget";
 import { NavLink } from "react-router-dom";
-import './NavBar.css';
+import "./NavBar.css";
 
 class Navbar extends Component {
   render() {
@@ -11,42 +11,30 @@ class Navbar extends Component {
         <NavLink to={"/"}>
           <img alt="logo" className="logo" src={logo}></img>
         </NavLink>
-        <div className="container-fluid">
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNavAltMarkup"
-            aria-controls="navbarNavAltMarkup"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div className="top-bar">
-              <NavLink className="nav-item" to={"/ItemList"}>
-                Todos los Productos
-              </NavLink>
-              <NavLink className="nav-item" to={`/category/Lavado`}>
-                Lavado
-              </NavLink>
-              <NavLink className="nav-item" to={`/category/Proteccion`}>
-                Proteccion
-              </NavLink>
-              <NavLink className="nav-item" to={`/category/Mantenimiento`}>
-                Mantenimiento
-              </NavLink>
-              <NavLink className="nav-item" to={`/category/Acondicionadores`}>
-                Acondicionadores
-              </NavLink>
-              <NavLink className="nav-item" to={`/category/Micros`}>
-                Micros
-              </NavLink>
 
-              <CartWidget />
-            </div>
+        <div className="nav nav-pills">
+          <div className="top-bar">
+            <NavLink className="nav-item" to={"/ItemList"}>
+              Todos los Productos
+            </NavLink>
+            <NavLink className="nav-item" to={`/category/Lavado`}>
+              Lavado
+            </NavLink>
+            <NavLink className="nav-item" to={`/category/Proteccion`}>
+              Proteccion
+            </NavLink>
+            <NavLink className="nav-item" to={`/category/Mantenimiento`}>
+              Mantenimiento
+            </NavLink>
+            <NavLink className="nav-item" to={`/category/Acondicionadores`}>
+              Acondicionadores
+            </NavLink>
+            <NavLink className="nav-item" to={`/category/Micros`}>
+              Micros
+            </NavLink>
           </div>
+          <CartWidget />
+
         </div>
       </nav>
     );
