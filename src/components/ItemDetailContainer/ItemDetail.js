@@ -6,33 +6,50 @@ import "./ItemDetail.css";
 
 function ItemDetail({ id, title, description, price, pictureUrl }) {
   const cartHandler = useContext(CartContext);
- 
+
   const onAdd = (amount) => {
     console.log(`Agregaste ${amount} productos`);
     const item = { id, title, description, price, pictureUrl };
-     cartHandler.addToCart(item, amount);
+    cartHandler.addToCart(item, amount);
   };
 
-  const agregado = cartHandler.isInCart ({id})
+  const agregado = cartHandler.isInCart({ id });
 
-  const removeItem = () => { cartHandler.removeItem({ id, title, description, price, pictureUrl }); };
+  const removeItem = () => {
+    cartHandler.removeItem({ id, title, description, price, pictureUrl });
+  };
   return (
-    <div className="grid">
-      <div className="col-mb-2">
-        <div className="card">
-          <div className="item">
-            <h3 className="card-title">{`${title}`}</h3>
-            <p className="card-text">{`${description}`}</p>
-            <img
-              className="img-item"
-              alt="..."
-              src={`${pictureUrl}`}
-            ></img>
-            <h4>{`$${price}`}</h4>
+    <div className="container">
+      <div className="row">
+        <div className="col">
+          <div className="row">
+            <div className="card">
+              <div className="item">
+                <h3 className="card-title">{`${title}`}</h3>
+                <img className="img-item" alt="..." src={`${pictureUrl}`}></img>
 
-            {agregado && <Link to="/cart">Terminar compra</Link>}
-            {/* {agregado && <button onClick={removeItem}> Borrar item</button>} */}
-            {!agregado && <ItemCount initial={0} stock={8} onAction={onAdd} label={"Agregar al Carrito"} />}
+                <div className="cols">
+                  <p className="card-text">{`${description}`}</p>
+
+                  <h4>{`$${price}`}</h4>
+
+                  {agregado && (
+                    <Link className="link" to="/cart">
+                      Terminar compra
+                    </Link>
+                  )}
+                  {/* {agregado && <button onClick={removeItem}> Borrar item</button>} */}
+                  {!agregado && (
+                    <ItemCount
+                      initial={0}
+                      stock={8}
+                      onAction={onAdd}
+                      label={"Agregar al Carrito"}
+                    />
+                  )}
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

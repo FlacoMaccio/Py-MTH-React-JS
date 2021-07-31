@@ -1,34 +1,35 @@
-.flex-container{   
-    background-color: gray;
-    border: 2px solid black;
-    width: 50%;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 100px;
-    margin-top: 30px;
-    display: inline-flex;
-} 
+.container {
+  background-color: gray;
+  border: 2px solid black;
+  width: 100px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 100px;
+  margin-top: 30px;
+  display: inline-flex;
+}
 
 .container-counter {
-    width: 100px;
-    border: 2px solid black;
-
+  text-align: center;
+  justify-content: center;
+  width: 100px;
+  border: 2px solid black;
 }
 
 .far counterButton {
-    margin-left: 50px;
-    float: right;
-    justify-content: center;
-    box-sizing: border-box;
-    display: flex;
-    margin: 30px;
-    align-content: space-around;
+  margin-left: 50px;
+  float: right;
+  justify-content: center;
+  box-sizing: border-box;
+  display: flex;
+  margin: 30px;
+  align-content: space-around;
 }
 
 .counterAmount {
-    margin: 20px;
+  margin: 20px;
 }
 
 .btn-secondary {
-    margin: 30px;
+  margin: 30px;
 }

@@ -27,6 +27,21 @@
 .container-item {
     display: flex;    
     height: 300px;
+  }
 
+  .card-text {
+    font-size: 20px;
+    display: flex;
+  }
 
+  .link{
+    text-align: center;
+    font-size: 20px;
+    color: #0b2d61;
+    text-shadow: 1px 1px 1px #000;
+  } 
+
+  .img-item {
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
