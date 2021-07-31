@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import { MenuItems } from "./MenuItems"
 import logo from "../../assets/images/logomth.png";
 import CartWidget from "../CartWidget/CartWidget";
 import { NavLink } from "react-router-dom";
+import './NavBar.css';
 
 class Navbar extends Component {
   render() {
@@ -25,14 +25,24 @@ class Navbar extends Component {
           </button>
           <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div className="top-bar">
-              <NavLink className="nav" to={"/ItemList"}>Todos los Productos</NavLink>
-              <NavLink className="nav" to={`/category/Lavado`}>Lavado</NavLink>
-              <NavLink className="nav" to={`/category/Proteccion`}>Proteccion</NavLink>
-              <NavLink className="nav" to={`/category/Mantenimiento`}>Mantenimiento</NavLink>
-              <NavLink className="nav" to={`/category/Acondicionadores`}>Acondicionadores</NavLink>
-              <NavLink className="nav" to={`/category/Micros`}>Micros</NavLink>
-
-
+              <NavLink className="nav-item" to={"/ItemList"}>
+                Todos los Productos
+              </NavLink>
+              <NavLink className="nav-item" to={`/category/Lavado`}>
+                Lavado
+              </NavLink>
+              <NavLink className="nav-item" to={`/category/Proteccion`}>
+                Proteccion
+              </NavLink>
+              <NavLink className="nav-item" to={`/category/Mantenimiento`}>
+                Mantenimiento
+              </NavLink>
+              <NavLink className="nav-item" to={`/category/Acondicionadores`}>
+                Acondicionadores
+              </NavLink>
+              <NavLink className="nav-item" to={`/category/Micros`}>
+                Micros
+              </NavLink>
 
               <CartWidget />
             </div>

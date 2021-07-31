@@ -31,7 +31,7 @@ function ItemDetail({ id, title, description, price, pictureUrl }) {
             <h4>{`$${price}`}</h4>
 
             {agregado && <Link to="/cart">Terminar compra</Link>}
-            {agregado && <button onClick={removeItem}> Borrar item</button>}
+            {/* {agregado && <button onClick={removeItem}> Borrar item</button>} */}
             {!agregado && <ItemCount initial={0} stock={8} onAction={onAdd} label={"Agregar al Carrito"} />}
           </div>
         </div>

@@ -3,6 +3,7 @@ import CartContext from "../../Context/CartContext";
 import ItemCount from "../ItemCount/ItemCount";
 import { addOrder } from "../ItemListContainer/ItemData";
 import CartForm from "./CartForm";
+import "./Cart.css";
 
 const Cart = () => {
   const { getItemsCount, getCartTotal, cart, removeItem } =
@@ -19,6 +20,7 @@ const Cart = () => {
         id: cartItem.id,
         title: cartItem.item.title,
         price: cartItem.item.price,
+        pictureUrl: cartItem.item.pictureUrl,
       };
       orderItems.push(orderItem);
     });
@@ -43,13 +45,11 @@ const Cart = () => {
 
   return (
     <div>
-      <h3> Cantidad total de items {getItemsCount()} </h3>
-      <h3> Monto Total ${getCartTotal()} </h3>
       <div className="container">
         <div className="row">
           <div className="col">
             <div className="CartList">
-              {getItemsCount() === 0 && <h3>Tu carrito esta vacio</h3>}
+              {getItemsCount() === 0 && <h2>Tu carrito esta vacio</h2>}
               {cart.map((cartItem) => {
                 return (
                   <div className="grid">
@@ -59,6 +59,11 @@ const Cart = () => {
                           <h3 className="card-title">{`${cartItem.item.title}`}</h3>
                           <h4>{`${cartItem.item.price}`}</h4>
                           <h5>{`${cartItem.quantity}`}</h5>
+                          <img
+                            className="img-item"
+                            alt="..."
+                            src={`${cartItem.item.pictureUrl}`}
+                          ></img>
                           <ItemCount
                             initial={cartItem.item.quantity}
                             stock={8}
@@ -76,7 +81,11 @@ const Cart = () => {
             </div>
           </div>
           <div className="col">
-            <CartForm onAction={saveOrder} />
+            <h3> Cantidad total de productos {getItemsCount()} </h3>
+            <h3> Total ${getCartTotal()} </h3>
+            <div className="cartForm">
+              <CartForm onAction={saveOrder} />
+            </div>
           </div>
         </div>
       </div>

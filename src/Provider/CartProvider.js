@@ -29,11 +29,13 @@ export default function CartProvider({ defaultValue = [], children }) {
     return total;
   }
 
-  function addToCart(item, quantity) {
+  function addToCart(item, quantity, pictureUrl) {
     const cartItem = {
       item: item,
       quantity: quantity,
       id: item.id,
+      pictureUrl: pictureUrl,
+
     };
 
     if (isInCart(cartItem)) {
