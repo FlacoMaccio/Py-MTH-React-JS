@@ -58,7 +58,7 @@ const Cart = () => {
                         <div className="item">
                           <h3 className="card-title">{`${cartItem.item.title}`}</h3>
                           <h4>{`$${cartItem.item.price}`}</h4>
-                          {/* <h5>{`${cartItem.quantity}`}</h5> */}
+                          <p>{`Unidades: ${cartItem.quantity}`}</p>
                           <img
                             className="img-item"
                             alt="..."
