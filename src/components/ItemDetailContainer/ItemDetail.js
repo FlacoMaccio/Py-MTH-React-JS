@@ -24,22 +24,17 @@ function ItemDetail({ id, title, description, price, pictureUrl }) {
       <div className="row">
         <div className="col">
           <div className="card">
-            {/* <div className="item  justify-content-center"> */}
               <img className="img-item center-block" alt="..." src={`${pictureUrl}`}></img>
-            {/* </div> */}
           </div>
         </div>
         <div className="col">
           <p className="card-text">{`${description}`}</p>
-
           <h4>{`$${price}`}</h4>
-
           {agregado && (
             <Link className="link" to="/cart">
               Terminar compra
             </Link>
           )}
-          {/* {agregado && <button onClick={removeItem}> Borrar item</button>} */}
           {!agregado && (
             <ItemCount
               initial={0}

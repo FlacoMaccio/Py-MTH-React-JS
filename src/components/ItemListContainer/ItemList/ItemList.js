@@ -2,7 +2,9 @@ import Item from "./Item";
 
 const ItemList = ({ items }) => {
   return (
-    <div className="ItemsList">
+    <div className="flex-container">
+      
+
       {items.map((item) => {
         return (
           <Item

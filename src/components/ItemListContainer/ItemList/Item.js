@@ -7,7 +7,7 @@ const Item = ({ id, title, description, price, pictureUrl }) => {
     console.log(`realizaste la compra de ${amount}`);
   };
   return (
-    <div className="flex-container">
+   
       <div className="flex-item">
         
           <div className="card-body">
@@ -20,11 +20,11 @@ const Item = ({ id, title, description, price, pictureUrl }) => {
               ></img>
             </Link>
             <h4>{`$${price}`}</h4>
-            {/* <ItemCount initial={0} stock={8} onAdd={onAdd} /> */}
+            
           </div>
         </div>
       
-    </div>
+    
   );
 };
 
