@@ -5,7 +5,6 @@ import CartContext from "../../Context/CartContext";
 import "./CartWidget.css";
 import { Link } from "react-router-dom";
 
-
 const CarWidget = () => {
   const { getItemsCount } = useContext(CartContext);
 

@@ -34,7 +34,6 @@ class Navbar extends Component {
             </NavLink>
           </div>
           <CartWidget />
-
         </div>
       </nav>
     );

@@ -1,6 +1,5 @@
 import { useContext } from "react";
 import CartContext from "../../Context/CartContext";
-import ItemCount from "../ItemCount/ItemCount";
 import { addOrder } from "../ItemListContainer/ItemData";
 import CartForm from "./CartForm";
 import "./Cart.css";
@@ -30,7 +29,6 @@ const Cart = () => {
         phone: phone,
         email: mail,
       },
-
       total: getCartTotal(),
       items: orderItems,
     };
@@ -64,7 +62,10 @@ const Cart = () => {
                             alt="..."
                             src={`${cartItem.item.pictureUrl}`}
                           ></img>
-                          <button  className="btn btn-secondary" onClick={() =>removeItem(cartItem.item)}>
+                          <button
+                            className="btn btn-secondary"
+                            onClick={() => removeItem(cartItem.item)}
+                          >
                             Quitar del carrito
                           </button>
                         </div>

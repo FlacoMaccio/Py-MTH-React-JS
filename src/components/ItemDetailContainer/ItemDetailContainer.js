@@ -7,11 +7,9 @@ const ItemDetailContainer = () => {
   const [item, setItem] = useState({});
   const { itemId } = useParams();
   useEffect(() => {
-    console.log("este es item id: " + itemId);
     getItem(itemId)
       .then((doc) => {
         if (!doc.exists) {
-          console.log("Item no encontrado");
           return;
         }
         setItem({ id: doc.id, ...doc.data() });

@@ -6,13 +6,12 @@ import ItemDetailContainer from "../ItemDetailContainer/ItemDetailContainer";
 import CartProvider from "../../Provider/CartProvider";
 import Cart from "../Cart/Cart";
 
-
 function Main() {
-    return (
-    <CartProvider defaultValue = {[]}>
+  return (
+    <CartProvider defaultValue={[]}>
       <BrowserRouter>
         <Navbar />
-        
+
         <Switch>
           <Route exact path="/">
             <div className="Home">
@@ -32,16 +31,13 @@ function Main() {
           </Route>
 
           <Route exact path="/category/:categoryid">
-            <ItemListContainer/>
+            <ItemListContainer />
           </Route>
 
           <Route exact path="/cart">
             <Cart />
           </Route>
-
-
         </Switch>
-        
       </BrowserRouter>
     </CartProvider>
   );

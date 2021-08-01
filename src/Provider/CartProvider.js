@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-
 import CartContext from "../Context/CartContext";
 
 export default function CartProvider({ defaultValue = [], children }) {
@@ -35,16 +34,12 @@ export default function CartProvider({ defaultValue = [], children }) {
       quantity: quantity,
       id: item.id,
       pictureUrl: pictureUrl,
-
     };
 
     if (isInCart(cartItem)) {
-      console.log("Element already in cache store.");
       return;
     }
-
     setCart([...cart, cartItem]);
-    console.log("Elemento agregado!");
   }
 
   function removeItem(item) {
@@ -57,7 +52,6 @@ export default function CartProvider({ defaultValue = [], children }) {
   function clearCart() {
     setCart([]);
   }
-
   const cartHandler = {
     cart,
     addToCart,
