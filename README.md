@@ -27,5 +27,5 @@ En el proyecto podemos encontrar los siguientes componentes principales:
  5. #### Cart 
 
 
-![Tienda Online MTH Demo](./francomaccio-mthreact.gif)
+![Tienda Online MTH Demo](./mthreact-francomaccio.gif)
 
