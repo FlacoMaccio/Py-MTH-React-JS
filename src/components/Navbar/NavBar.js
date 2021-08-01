@@ -26,11 +26,11 @@ class Navbar extends Component {
             <NavLink className="nav-item" to={`/category/Mantenimiento`}>
               Mantenimiento
             </NavLink>
-            <NavLink className="nav-item" to={`/category/Acondicionadores`}>
+            <NavLink className="nav-item" to={`/category/Acondicionador`}>
               Acondicionadores
             </NavLink>
-            <NavLink className="nav-item" to={`/category/Micros`}>
-              Micros
+            <NavLink className="nav-item" to={`/category/Microfibras`}>
+              Microfibras
             </NavLink>
           </div>
           <CartWidget />

@@ -20,7 +20,7 @@
 .img-item {
   padding: 0.25rem;
   border: 1px solid #dee2e6;
-  border-radius: 0.50rem;
+  border-radius: 0.5rem;
   max-width: auto;
   height: 300px;
 }
@@ -32,16 +32,13 @@
   padding: 5px;
 }
 
-
 .card-title {
-  
   color: #f51010;
   margin-top: 40px;
-    font-size: 35px;
-    font-family: 'Bebas Neue', sans-serif;
-    text-align: center;
-    text-shadow: 1px 1px #515151;
-    letter-spacing: 7px;
+  font-size: 35px;
+  font-family: "Bebas Neue", sans-serif;
+  text-align: center;
+  text-shadow: 1px 1px #515151;
 }
 
 .text-sub {
