@@ -52,6 +52,7 @@ export default function CartProvider({ defaultValue = [], children }) {
   function clearCart() {
     setCart([]);
   }
+  
   const cartHandler = {
     cart,
     addToCart,
