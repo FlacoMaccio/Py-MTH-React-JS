@@ -5,7 +5,7 @@ import CartForm from "./CartForm";
 import "./Cart.css";
 
 const Cart = () => {
-  const { getItemsCount, getCartTotal, cart, removeItem } =
+  const { getItemsCount, getCartTotal, cart, removeItem, clearCart } =
     useContext(CartContext);
 
   const saveOrder = (name, phone, mail) => {
@@ -35,7 +35,9 @@ const Cart = () => {
     addOrder(newOrder)
       .then(({ id }) => {
         alert(`Orden Creada. Este es tu ID: ${id}`);
+        clearCart();
       })
+
       .catch((error) => {
         console.log(error);
       });
@@ -80,7 +82,7 @@ const Cart = () => {
             <h3> Cantidad total de productos {getItemsCount()} </h3>
             <h3> Total ${getCartTotal()} </h3>
             <div className="cartForm">
-              <CartForm onAction={saveOrder} />
+            {getItemsCount() !== 0 && <CartForm onAction={saveOrder} />}
             </div>
           </div>
         </div>

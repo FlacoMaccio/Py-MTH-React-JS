@@ -10,7 +10,13 @@ const CartForm = ({ onAction }) => {
     else if (phone === "") alert("Ingresa tu telefono");
     else if (mail === "") alert("Ingresa tu mail");
     else if (mail !== confirmacionMail) alert("Los mails no coinciden");
-    else onAction(name, phone, mail, confirmacionMail);
+    else {
+      onAction(name, phone, mail, confirmacionMail);
+      document.getElementById("input-name").value = "";
+      document.getElementById("input-phone").value = "";
+      document.getElementById("input-mail").value = "";
+      document.getElementById("input-confirmmail").value = "";
+    }
   };
   return (
     <div>
