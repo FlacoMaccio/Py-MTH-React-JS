@@ -10,7 +10,7 @@ const Cart = () => {
 
   const saveOrder = (name, phone, mail) => {
     const orderItems = [];
-    if (getItemsCount() == 0) {
+    if (getItemsCount() === 0) {
       alert("El carrito se encuentra vacio");
       return;
     }
@@ -49,8 +49,8 @@ const Cart = () => {
             <div className="CartList">
               {getItemsCount() === 0 && <h2>Tu carrito esta vacio</h2>}
               {cart.map((cartItem) => {
-                return (
-                  <div className="grid">
+                return ( 
+                  <div className="grid" key={cartItem.id}>
                     <div className="col-mb-2">
                       <div className="card">
                         <div className="item">

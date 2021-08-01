@@ -7,7 +7,7 @@ const ItemCount = ({ initial, stock, onAction, label }) => {
     items < stock ? setItems(items + 1) : alert("Stock Agotado");
   };
   const removeItems = () => {
-    0 == items ? alert("El minimo de ventas es 1 unidad") : setItems(items - 1);
+    0 === items ? alert("El minimo de ventas es 1 unidad") : setItems(items - 1);
   };
 
   return (

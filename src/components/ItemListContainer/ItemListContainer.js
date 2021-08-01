@@ -8,7 +8,7 @@ const ItemListContainer = () => {
   const [Items, setItems] = useState([]);
   const { categoryid } = useParams();
   useEffect(() => {
-    console.log("este es item category: " + categoryid);
+    
     if (categoryid === undefined) {
       getItems()
         .then((data) => {
@@ -20,7 +20,7 @@ const ItemListContainer = () => {
     } else {
       getItemsByCategory(categoryid)
         .then((data) => {
-          console.log(data);
+          
           setItems(data.docs.map((doc) => ({ id: doc.id, ...doc.data() })));
         })
         .catch((error) => {
