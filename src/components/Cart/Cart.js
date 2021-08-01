@@ -64,14 +64,9 @@ const Cart = () => {
                             alt="..."
                             src={`${cartItem.item.pictureUrl}`}
                           ></img>
-                          <ItemCount
-                            // initial={cartItem.item.quantity}
-                            stock={8}
-                            onAction={() => {
-                              removeItem(cartItem.item);
-                            }}
-                            label={"Quitar del carrito"}
-                          />
+                          <button  className="btn btn-secondary" onClick={() =>removeItem(cartItem.item)}>
+                            Quitar del carrito
+                          </button>
                         </div>
                       </div>
                     </div>

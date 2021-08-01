@@ -33,8 +33,14 @@
 
 
 .card-title {
+  
   color: #f51010;
-  text-shadow: 1px 1px 1px #000;
+  margin-top: 40px;
+    font-size: 35px;
+    font-family: 'Bebas Neue', sans-serif;
+    text-align: center;
+    text-shadow: 1px 1px #515151;
+    letter-spacing: 7px;
 }
 
 .text-sub {

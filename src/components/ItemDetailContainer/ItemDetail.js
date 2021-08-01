@@ -20,37 +20,34 @@ function ItemDetail({ id, title, description, price, pictureUrl }) {
   };
   return (
     <div className="container">
+      <h3 className="card-title">{`${title}`}</h3>
       <div className="row">
         <div className="col">
-          <div className="row">
-            <div className="card">
-              <div className="item">
-                <h3 className="card-title">{`${title}`}</h3>
-                <img className="img-item" alt="..." src={`${pictureUrl}`}></img>
-
-                <div className="cols">
-                  <p className="card-text">{`${description}`}</p>
-
-                  <h4>{`$${price}`}</h4>
-
-                  {agregado && (
-                    <Link className="link" to="/cart">
-                      Terminar compra
-                    </Link>
-                  )}
-                  {/* {agregado && <button onClick={removeItem}> Borrar item</button>} */}
-                  {!agregado && (
-                    <ItemCount
-                      initial={0}
-                      stock={8}
-                      onAction={onAdd}
-                      label={"Agregar al Carrito"}
-                    />
-                  )}
-                </div>
-              </div>
-            </div>
+          <div className="card">
+            {/* <div className="item  justify-content-center"> */}
+              <img className="img-item center-block" alt="..." src={`${pictureUrl}`}></img>
+            {/* </div> */}
           </div>
+        </div>
+        <div className="col">
+          <p className="card-text">{`${description}`}</p>
+
+          <h4>{`$${price}`}</h4>
+
+          {agregado && (
+            <Link className="link" to="/cart">
+              Terminar compra
+            </Link>
+          )}
+          {/* {agregado && <button onClick={removeItem}> Borrar item</button>} */}
+          {!agregado && (
+            <ItemCount
+              initial={0}
+              stock={8}
+              onAction={onAdd}
+              label={"Agregar al Carrito"}
+            />
+          )}
         </div>
       </div>
     </div>
